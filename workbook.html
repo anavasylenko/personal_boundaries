@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Boundary Journey — Personal Workbook</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@300;400;500;600&family=Caveat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="workbook.css">
+</head>
+<body>
+    <div class="progress-bar" id="progress-bar"></div>
+
+    <header class="header">
+        <nav class="header-nav">
+            <a href="index.html" class="back-link">&larr; Research Guide</a>
+            <div class="header-actions">
+                <a href="../website-ru/workbook.html" class="lang-toggle-wb">RU</a>
+                <button class="save-btn" id="save-btn">Save My Answers</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="workbook">
+        <!-- Intro -->
+        <section class="intro">
+            <h1>Your Boundary Journey</h1>
+            <p class="intro-subtitle">A personal workbook</p>
+            <div class="guru-message">
+                <div class="guru-avatar">&#9753;</div>
+                <div class="guru-text">
+                    <p>Hey. I'm glad you're here.</p>
+                    <p>Setting boundaries is one of the bravest things you'll ever do. It's not about building walls — it's about knowing where you end and others begin, so you can love more honestly and live more freely.</p>
+                    <p>This workbook is yours. There are no wrong answers. Go at your own pace. You can save your progress and come back anytime.</p>
+                    <p>Let's start where you are right now.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 1: Where Are You Now? -->
+        <section class="step" id="step-1">
+            <div class="step-header">
+                <span class="step-number">Step 1</span>
+                <h2>Where Are You Now?</h2>
+            </div>
+
+            <div class="guru-message">
+                <div class="guru-avatar">&#9753;</div>
+                <div class="guru-text">
+                    <p>Before we build anything new, let's understand where you're starting from. No judgment — just honest looking. Think of this like checking the weather before a journey.</p>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <label class="question">On a scale of 1-10, how easy is it for you to say "no" right now?</label>
+                <p class="hint">1 = nearly impossible, 10 = completely natural</p>
+                <input type="range" min="1" max="10" value="5" class="slider" id="q-sayno" oninput="this.nextElementSibling.textContent = this.value">
+                <span class="slider-value">5</span>
+            </div>
+
+            <div class="question-block">
+                <label class="question">When someone crosses your boundaries, what do you typically do?</label>
+                <p class="hint">Be honest — this is just for you.</p>
+                <div class="checkbox-group">
+                    <label class="checkbox-label"><input type="checkbox" name="q-reaction" value="freeze"> I freeze and go along with it</label>
+                    <label class="checkbox-label"><input type="checkbox" name="q-reaction" value="anger"> I get angry (but often don't say anything)</label>
+                    <label class="checkbox-label"><input type="checkbox" name="q-reaction" value="rationalize"> I tell myself it's not a big deal</label>
+                    <label class="checkbox-label"><input type="checkbox" name="q-reaction" value="later"> I realize it happened hours/days later</label>
+                    <label class="checkbox-label"><input type="checkbox" name="q-reaction" value="explode"> I build up and then explode</label>
+                    <label class="checkbox-label"><input type="checkbox" name="q-reaction" value="avoid"> I avoid the person afterward</label>
+                </div>
+                <textarea class="journal-input" id="q-reaction-other" placeholder="Anything else you notice about your pattern..."></textarea>
+            </div>
+
+            <div class="question-block">
+                <label class="question">Complete this sentence honestly:</label>
+                <p class="hint">"If I set a boundary, I'm afraid that..."</p>
+                <textarea class="journal-input large" id="q-fear" placeholder="Write whatever comes up. There's no wrong answer."></textarea>
+            </div>
+
+            <div class="guru-message">
+                <div class="guru-avatar">&#9753;</div>
+                <div class="guru-text">
+                    <p>Whatever you wrote — that fear is real and it makes sense. It probably kept you safe once. But here's what I want you to know: <strong>the fear of setting a boundary is almost always worse than what actually happens when you set one.</strong></p>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <label class="question">Which areas of your life feel most "boundary-less" right now?</label>
+                <p class="hint">Check all that apply</p>
+                <div class="checkbox-group">
+                    <label class="checkbox-label"><input type="checkbox" name="q-areas" value="family"> Family / Parents</label>
+                    <label class="checkbox-label"><input type="checkbox" name="q-areas" value="romantic"> Romantic relationship</label>
+                    <label class="checkbox-label"><input type="checkbox" name="q-areas" value="friends"> Friendships</label>
+                    <label class="checkbox-label"><input type="checkbox" name="q-areas" value="work"> Work / Boss / Colleagues</label>
+                    <label class="checkbox-label"><input type="checkbox" name="q-areas" value="self"> With myself (self-discipline, self-care)</label>
+                    <label class="checkbox-label"><input type="checkbox" name="q-areas" value="digital"> Digital / social media / phone</label>
+                    <label class="checkbox-label"><input type="checkbox" name="q-areas" value="body"> Physical / body / space</label>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 2: Understanding Your Story -->
+        <section class="step" id="step-2">
+            <div class="step-header">
+                <span class="step-number">Step 2</span>
+                <h2>Understanding Your Story</h2>
+            </div>
+
+            <div class="guru-message">
+                <div class="guru-avatar">&#9753;</div>
+                <div class="guru-text">
+                    <p>Your boundary patterns didn't appear from nowhere. They were shaped — usually in childhood — by what was safe and what wasn't. Let's gently explore that. You don't have to go deep if it doesn't feel right today. You can always come back.</p>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <label class="question">In your family growing up, what was the unspoken rule about boundaries?</label>
+                <p class="hint">Think about what was modeled, what was punished, what was rewarded.</p>
+                <div class="checkbox-group">
+                    <label class="checkbox-label"><input type="checkbox" name="q-family-rules" value="needs-selfish"> Having needs was seen as selfish</label>
+                    <label class="checkbox-label"><input type="checkbox" name="q-family-rules" value="no-privacy"> There was little privacy</label>
+                    <label class="checkbox-label"><input type="checkbox" name="q-family-rules" value="anger-forbidden"> Anger was forbidden or punished</label>
+                    <label class="checkbox-label"><input type="checkbox" name="q-family-rules" value="keep-peace"> I had to keep the peace</label>
+                    <label class="checkbox-label"><input type="checkbox" name="q-family-rules" value="parents-feelings"> I was responsible for a parent's feelings</label>
+                    <label class="checkbox-label"><input type="checkbox" name="q-family-rules" value="good-child"> Being "good" meant being quiet/compliant</label>
+                    <label class="checkbox-label"><input type="checkbox" name="q-family-rules" value="emotions-ignored"> My emotions were dismissed or mocked</label>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <label class="question">What did you learn about saying "no" as a child?</label>
+                <textarea class="journal-input large" id="q-childhood-no" placeholder="What happened when you said no? Was it safe? What did you learn?"></textarea>
+            </div>
+
+            <div class="question-block">
+                <label class="question">Which "role" did you play in your family?</label>
+                <div class="radio-group">
+                    <label class="radio-label"><input type="radio" name="q-role" value="caretaker"> The Caretaker — I took care of everyone's feelings</label>
+                    <label class="radio-label"><input type="radio" name="q-role" value="invisible"> The Invisible One — I made myself small and quiet</label>
+                    <label class="radio-label"><input type="radio" name="q-role" value="peacekeeper"> The Peacekeeper — I mediated and smoothed things over</label>
+                    <label class="radio-label"><input type="radio" name="q-role" value="achiever"> The Achiever — I earned love through performance</label>
+                    <label class="radio-label"><input type="radio" name="q-role" value="rebel"> The Rebel — I fought against control (rigid boundaries)</label>
+                    <label class="radio-label"><input type="radio" name="q-role" value="other"> Something else</label>
+                </div>
+                <textarea class="journal-input" id="q-role-detail" placeholder="Tell me more about this role..."></textarea>
+            </div>
+
+            <div class="guru-message">
+                <div class="guru-avatar">&#9753;</div>
+                <div class="guru-text">
+                    <p>That role you played? It was brilliant. It was your child-self's best strategy for survival. You found a way to stay safe in your environment. <strong>But you're not that child anymore.</strong> You have choices now that you didn't have then. The role served you once — but it doesn't have to define you forever.</p>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <label class="question">Whose voice do you hear in your head when you try to set a boundary?</label>
+                <p class="hint">Whose disapproval do you fear most?</p>
+                <textarea class="journal-input" id="q-voice" placeholder="A parent? A partner? A cultural message? A religious authority?"></textarea>
+            </div>
+        </section>
+
+        <!-- Step 3: Discovering Your Values -->
+        <section class="step" id="step-3">
+            <div class="step-header">
+                <span class="step-number">Step 3</span>
+                <h2>Discovering Your Values</h2>
+            </div>
+
+            <div class="guru-message">
+                <div class="guru-avatar">&#9753;</div>
+                <div class="guru-text">
+                    <p>Here's something powerful: <strong>your values ARE your boundaries.</strong> When you know what matters most to you, your boundaries become clear — they're simply the protection around what you hold sacred.</p>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <label class="question">Choose your top 5 core values:</label>
+                <p class="hint">What matters most to how you want to live?</p>
+                <div class="values-grid">
+                    <label class="value-chip"><input type="checkbox" name="q-values" value="honesty"> Honesty</label>
+                    <label class="value-chip"><input type="checkbox" name="q-values" value="peace"> Peace</label>
+                    <label class="value-chip"><input type="checkbox" name="q-values" value="freedom"> Freedom</label>
+                    <label class="value-chip"><input type="checkbox" name="q-values" value="creativity"> Creativity</label>
+                    <label class="value-chip"><input type="checkbox" name="q-values" value="health"> Health</label>
+                    <label class="value-chip"><input type="checkbox" name="q-values" value="family"> Family</label>
+                    <label class="value-chip"><input type="checkbox" name="q-values" value="respect"> Respect</label>
+                    <label class="value-chip"><input type="checkbox" name="q-values" value="growth"> Growth</label>
+                    <label class="value-chip"><input type="checkbox" name="q-values" value="authenticity"> Authenticity</label>
+                    <label class="value-chip"><input type="checkbox" name="q-values" value="safety"> Safety</label>
+                    <label class="value-chip"><input type="checkbox" name="q-values" value="independence"> Independence</label>
+                    <label class="value-chip"><input type="checkbox" name="q-values" value="connection"> Connection</label>
+                    <label class="value-chip"><input type="checkbox" name="q-values" value="spirituality"> Spirituality</label>
+                    <label class="value-chip"><input type="checkbox" name="q-values" value="joy"> Joy</label>
+                    <label class="value-chip"><input type="checkbox" name="q-values" value="loyalty"> Loyalty</label>
+                    <label class="value-chip"><input type="checkbox" name="q-values" value="justice"> Justice</label>
+                    <label class="value-chip"><input type="checkbox" name="q-values" value="kindness"> Kindness</label>
+                    <label class="value-chip"><input type="checkbox" name="q-values" value="adventure"> Adventure</label>
+                    <label class="value-chip"><input type="checkbox" name="q-values" value="stability"> Stability</label>
+                    <label class="value-chip"><input type="checkbox" name="q-values" value="love"> Love</label>
+                </div>
+                <textarea class="journal-input" id="q-values-other" placeholder="Any other values that are important to you?"></textarea>
+            </div>
+
+            <div class="question-block">
+                <label class="question">For each value you chose — where is it being violated?</label>
+                <p class="hint">Example: "I value peace, but my sister's constant drama pulls me into chaos."</p>
+                <textarea class="journal-input large" id="q-values-violated" placeholder="Value: _________ is being violated when...&#10;Value: _________ is being violated when...&#10;Value: _________ is being violated when..."></textarea>
+            </div>
+
+            <div class="question-block">
+                <label class="question">Now — what boundary would protect each violated value?</label>
+                <p class="hint">Be specific and behavioral. Not "more respect" but "stop calling after 9pm."</p>
+                <textarea class="journal-input large" id="q-values-protect" placeholder="To protect my _________, I need to...&#10;To protect my _________, I need to...&#10;To protect my _________, I need to..."></textarea>
+            </div>
+
+            <div class="guru-message">
+                <div class="guru-avatar">&#9753;</div>
+                <div class="guru-text">
+                    <p>Look at what you just wrote. Those aren't selfish demands — those are the conditions you need to be the person you want to be. Every spiritual tradition agrees: protecting the conditions for your own growth is a sacred responsibility.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 4: The Body Check -->
+        <section class="step" id="step-4">
+            <div class="step-header">
+                <span class="step-number">Step 4</span>
+                <h2>Learning Your Body's Language</h2>
+            </div>
+
+            <div class="guru-message">
+                <div class="guru-avatar">&#9753;</div>
+                <div class="guru-text">
+                    <p>Your body is your first boundary alarm system. It knows before your mind does. But most of us have been trained to ignore it — "don't be dramatic," "you're fine," "push through." Let's start listening again.</p>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <label class="question">Think of a recent situation where you felt your boundaries were crossed. Close your eyes for a moment and recall it. Where do you feel it in your body?</label>
+                <div class="body-map">
+                    <div class="body-area">
+                        <label class="checkbox-label"><input type="checkbox" name="q-body" value="head"> Head (pressure, headache, foggy)</label>
+                    </div>
+                    <div class="body-area">
+                        <label class="checkbox-label"><input type="checkbox" name="q-body" value="throat"> Throat (tight, words stuck, lump)</label>
+                    </div>
+                    <div class="body-area">
+                        <label class="checkbox-label"><input type="checkbox" name="q-body" value="chest"> Chest (tight, heavy, racing heart)</label>
+                    </div>
+                    <div class="body-area">
+                        <label class="checkbox-label"><input type="checkbox" name="q-body" value="shoulders"> Shoulders (tense, raised, armor-like)</label>
+                    </div>
+                    <div class="body-area">
+                        <label class="checkbox-label"><input type="checkbox" name="q-body" value="stomach"> Stomach (knots, nausea, dropping)</label>
+                    </div>
+                    <div class="body-area">
+                        <label class="checkbox-label"><input type="checkbox" name="q-body" value="hands"> Hands (clenched, shaking, cold)</label>
+                    </div>
+                    <div class="body-area">
+                        <label class="checkbox-label"><input type="checkbox" name="q-body" value="legs"> Legs (restless, weak, wanting to run)</label>
+                    </div>
+                    <div class="body-area">
+                        <label class="checkbox-label"><input type="checkbox" name="q-body" value="whole"> Whole body (numb, heavy, frozen)</label>
+                    </div>
+                </div>
+                <textarea class="journal-input" id="q-body-detail" placeholder="Describe what you notice in more detail..."></textarea>
+            </div>
+
+            <div class="exercise-box">
+                <h3>Practice: The Pause</h3>
+                <p>For the next week, before saying "yes" to any request:</p>
+                <ol>
+                    <li>Take ONE full breath (in through nose, out through mouth)</li>
+                    <li>Notice: Is my body <strong>expanding</strong> (open, light, "yes") or <strong>contracting</strong> (tight, heavy, "no")?</li>
+                    <li>If contracting: <em>"Let me get back to you on that."</em></li>
+                </ol>
+                <p class="exercise-note">That's it. You don't have to say no yet. Just practice <strong>not saying yes immediately.</strong></p>
+            </div>
+
+            <div class="question-block">
+                <label class="question">What's your body's unique "no" signal? What does YOUR body do when something isn't right?</label>
+                <textarea class="journal-input" id="q-body-no" placeholder="My body says 'no' by..."></textarea>
+            </div>
+        </section>
+
+        <!-- Step 5: Your Boundary Bill of Rights -->
+        <section class="step" id="step-5">
+            <div class="step-header">
+                <span class="step-number">Step 5</span>
+                <h2>Your Boundary Bill of Rights</h2>
+            </div>
+
+            <div class="guru-message">
+                <div class="guru-avatar">&#9753;</div>
+                <div class="guru-text">
+                    <p>I want you to write your personal manifesto — the rights you claim for yourself. Not rights you "earn" or "deserve if you're good enough." Rights you have simply because you exist. Read these back to yourself on hard days.</p>
+                </div>
+            </div>
+
+            <div class="rights-builder">
+                <p class="rights-intro">I have the right to...</p>
+                <div class="rights-list">
+                    <div class="right-item">
+                        <label class="checkbox-label"><input type="checkbox" name="q-rights" value="no" checked> Say "no" without explaining why</label>
+                    </div>
+                    <div class="right-item">
+                        <label class="checkbox-label"><input type="checkbox" name="q-rights" value="feelings" checked> Feel my feelings without being told I'm "too much"</label>
+                    </div>
+                    <div class="right-item">
+                        <label class="checkbox-label"><input type="checkbox" name="q-rights" value="change-mind" checked> Change my mind</label>
+                    </div>
+                    <div class="right-item">
+                        <label class="checkbox-label"><input type="checkbox" name="q-rights" value="rest"> Rest without guilt</label>
+                    </div>
+                    <div class="right-item">
+                        <label class="checkbox-label"><input type="checkbox" name="q-rights" value="alone"> Be alone when I need to be</label>
+                    </div>
+                    <div class="right-item">
+                        <label class="checkbox-label"><input type="checkbox" name="q-rights" value="disagree"> Disagree with people I love</label>
+                    </div>
+                    <div class="right-item">
+                        <label class="checkbox-label"><input type="checkbox" name="q-rights" value="not-responsible"> Not be responsible for other adults' emotions</label>
+                    </div>
+                    <div class="right-item">
+                        <label class="checkbox-label"><input type="checkbox" name="q-rights" value="imperfect"> Be imperfect and still be loved</label>
+                    </div>
+                    <div class="right-item">
+                        <label class="checkbox-label"><input type="checkbox" name="q-rights" value="leave"> Leave situations that harm me</label>
+                    </div>
+                    <div class="right-item">
+                        <label class="checkbox-label"><input type="checkbox" name="q-rights" value="needs"> Have needs and ask for them to be met</label>
+                    </div>
+                    <div class="right-item">
+                        <label class="checkbox-label"><input type="checkbox" name="q-rights" value="privacy"> Keep parts of my life private</label>
+                    </div>
+                    <div class="right-item">
+                        <label class="checkbox-label"><input type="checkbox" name="q-rights" value="choose"> Choose who has access to me</label>
+                    </div>
+                </div>
+                <textarea class="journal-input" id="q-rights-custom" placeholder="Add your own rights here...&#10;&#10;I have the right to...&#10;I have the right to..."></textarea>
+            </div>
+
+            <div class="guru-message">
+                <div class="guru-avatar">&#9753;</div>
+                <div class="guru-text">
+                    <p>If reading any of those rights made you feel uncomfortable or guilty — notice that. That discomfort is the exact location of your growth edge. The rights that feel hardest to claim are the ones you need most.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 6: The Specific Boundary -->
+        <section class="step" id="step-6">
+            <div class="step-header">
+                <span class="step-number">Step 6</span>
+                <h2>Naming Your First Boundary</h2>
+            </div>
+
+            <div class="guru-message">
+                <div class="guru-avatar">&#9753;</div>
+                <div class="guru-text">
+                    <p>Now let's get specific. I want you to pick ONE boundary to work on. Not the hardest one — start with something medium-difficulty. A boundary you can practice that won't destroy your world but will build your muscle.</p>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <label class="question">The situation:</label>
+                <p class="hint">What's happening? Who's involved? Be concrete.</p>
+                <textarea class="journal-input large" id="q-situation" placeholder="Example: My mother calls me every day and the conversations last 45+ minutes. If I try to get off the phone, she guilt-trips me."></textarea>
+            </div>
+
+            <div class="question-block">
+                <label class="question">What specifically do you need to change?</label>
+                <p class="hint">Be behavioral — what should stop, start, or change?</p>
+                <textarea class="journal-input" id="q-need" placeholder="Example: I need our calls to be 15 minutes max, 3 times a week."></textarea>
+            </div>
+
+            <div class="question-block">
+                <label class="question">How will you communicate it?</label>
+                <p class="hint">Write out the actual words you'll say. Use the formula: "I love you / I need X / If Y happens, I will Z"</p>
+                <textarea class="journal-input large" id="q-script" placeholder="Write your script here. Say it out loud after you write it — does it feel true?"></textarea>
+            </div>
+
+            <div class="question-block">
+                <label class="question">What's the consequence if this boundary is violated?</label>
+                <p class="hint">Remember: a consequence is what YOU will do to protect yourself. Not a punishment.</p>
+                <textarea class="journal-input" id="q-consequence" placeholder="If my boundary is not respected, I will..."></textarea>
+            </div>
+
+            <div class="question-block">
+                <label class="question">What's the worst that could realistically happen?</label>
+                <textarea class="journal-input" id="q-worst" placeholder="Be specific. Then ask: could I survive that?"></textarea>
+            </div>
+
+            <div class="question-block">
+                <label class="question">What's the cost of NOT setting this boundary?</label>
+                <p class="hint">What are you losing by keeping things as they are?</p>
+                <textarea class="journal-input" id="q-cost" placeholder="If I never set this boundary, I will continue to..."></textarea>
+            </div>
+
+            <div class="guru-message">
+                <div class="guru-avatar">&#9753;</div>
+                <div class="guru-text">
+                    <p>Read back what you wrote about the cost of NOT setting this boundary. Is that a life you want? Usually, when we clearly see what we're losing, the fear of setting the boundary becomes smaller than the pain of not setting it.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 7: Preparing for Pushback -->
+        <section class="step" id="step-7">
+            <div class="step-header">
+                <span class="step-number">Step 7</span>
+                <h2>Preparing for Pushback</h2>
+            </div>
+
+            <div class="guru-message">
+                <div class="guru-avatar">&#9753;</div>
+                <div class="guru-text">
+                    <p>Let me be straight with you: when you set a boundary with someone who benefited from you having none, they will likely push back. This isn't a sign you did something wrong — it's a sign the boundary is working. Let's prepare you.</p>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <label class="question">How do you think this person will react?</label>
+                <div class="checkbox-group">
+                    <label class="checkbox-label"><input type="checkbox" name="q-pushback" value="guilt"> Guilt-trip ("After everything I've done...")</label>
+                    <label class="checkbox-label"><input type="checkbox" name="q-pushback" value="anger"> Get angry / yell</label>
+                    <label class="checkbox-label"><input type="checkbox" name="q-pushback" value="silent"> Give me the silent treatment</label>
+                    <label class="checkbox-label"><input type="checkbox" name="q-pushback" value="minimize"> Minimize ("You're being dramatic")</label>
+                    <label class="checkbox-label"><input type="checkbox" name="q-pushback" value="victim"> Play victim ("I guess I'm just a terrible person")</label>
+                    <label class="checkbox-label"><input type="checkbox" name="q-pushback" value="test"> Test the boundary (do it again to see if I'll enforce)</label>
+                    <label class="checkbox-label"><input type="checkbox" name="q-pushback" value="recruit"> Recruit others ("Can you believe she said...")</label>
+                </div>
+            </div>
+
+            <div class="response-prep">
+                <h3>Your Prepared Responses</h3>
+                <p class="hint">Remember: Don't JADE (Justify, Argue, Defend, Explain). Keep it short.</p>
+
+                <div class="response-item">
+                    <label>If they guilt-trip me, I will say:</label>
+                    <textarea class="journal-input" id="q-resp-guilt" placeholder="Example: 'I understand this is hard. My need still stands.'"></textarea>
+                </div>
+                <div class="response-item">
+                    <label>If they get angry, I will:</label>
+                    <textarea class="journal-input" id="q-resp-anger" placeholder="Example: 'I hear that you're upset. I'm going to step away and we can talk when things are calm.'"></textarea>
+                </div>
+                <div class="response-item">
+                    <label>If they give me the silent treatment, I will:</label>
+                    <textarea class="journal-input" id="q-resp-silent" placeholder="Example: 'I'll let them have their space. I won't chase or apologize for my boundary.'"></textarea>
+                </div>
+                <div class="response-item">
+                    <label>If I start to feel guilty, I will remind myself:</label>
+                    <textarea class="journal-input" id="q-resp-guilt-self" placeholder="What truth can anchor you in that moment?"></textarea>
+                </div>
+            </div>
+
+            <div class="guru-message">
+                <div class="guru-avatar">&#9753;</div>
+                <div class="guru-text">
+                    <p>Here's your mantra for pushback: <strong>"Their discomfort with my boundary is not evidence that my boundary is wrong."</strong> Say it until you believe it. Their feelings about your boundary are theirs to manage — just as your feelings are yours.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 8: The Guilt Work -->
+        <section class="step" id="step-8">
+            <div class="step-header">
+                <span class="step-number">Step 8</span>
+                <h2>Working with Guilt</h2>
+            </div>
+
+            <div class="guru-message">
+                <div class="guru-avatar">&#9753;</div>
+                <div class="guru-text">
+                    <p>Guilt is the #1 reason people abandon boundaries. So let's look at it directly. Not to make it go away — but to understand it so it doesn't run you.</p>
+                    <p>Here's the key insight: <strong>guilt when setting boundaries is a sign of growth, not wrongdoing.</strong> You're feeling guilty because you're doing something your old programming says is "not allowed." But you're rewriting that program now.</p>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <label class="question">When you imagine setting your boundary, what does the guilt say?</label>
+                <p class="hint">Write the guilty thoughts — the internal narrative. Get it out of your head and onto the page.</p>
+                <textarea class="journal-input large" id="q-guilt-voice" placeholder="The guilt says: 'You're being selfish...' / 'They'll be hurt...' / 'You don't deserve...'"></textarea>
+            </div>
+
+            <div class="question-block">
+                <label class="question">Now — whose voice is that, really?</label>
+                <p class="hint">Is it yours? Or did you inherit it?</p>
+                <textarea class="journal-input" id="q-guilt-source" placeholder="That voice sounds like..."></textarea>
+            </div>
+
+            <div class="reframe-exercise">
+                <h3>Reframe Practice</h3>
+                <p>For each guilty thought, write the counter-truth:</p>
+
+                <div class="reframe-pair">
+                    <div class="reframe-old">
+                        <label>Guilty thought:</label>
+                        <textarea class="journal-input" id="q-reframe-old-1" placeholder="'I'm being selfish'"></textarea>
+                    </div>
+                    <div class="reframe-arrow">&rarr;</div>
+                    <div class="reframe-new">
+                        <label>Counter-truth:</label>
+                        <textarea class="journal-input" id="q-reframe-new-1" placeholder="'I'm being self-responsible. Caring for myself isn't theft from others.'"></textarea>
+                    </div>
+                </div>
+
+                <div class="reframe-pair">
+                    <div class="reframe-old">
+                        <label>Guilty thought:</label>
+                        <textarea class="journal-input" id="q-reframe-old-2" placeholder="'They'll be hurt'"></textarea>
+                    </div>
+                    <div class="reframe-arrow">&rarr;</div>
+                    <div class="reframe-new">
+                        <label>Counter-truth:</label>
+                        <textarea class="journal-input" id="q-reframe-new-2" placeholder="'They may be uncomfortable. Discomfort is not harm. They can handle it.'"></textarea>
+                    </div>
+                </div>
+
+                <div class="reframe-pair">
+                    <div class="reframe-old">
+                        <label>Guilty thought:</label>
+                        <textarea class="journal-input" id="q-reframe-old-3" placeholder="Write your own..."></textarea>
+                    </div>
+                    <div class="reframe-arrow">&rarr;</div>
+                    <div class="reframe-new">
+                        <label>Counter-truth:</label>
+                        <textarea class="journal-input" id="q-reframe-new-3" placeholder="Write the truth..."></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="guru-message">
+                <div class="guru-avatar">&#9753;</div>
+                <div class="guru-text">
+                    <p>A spiritual truth across every tradition: <strong>you cannot pour from an empty vessel and call it generosity — that's self-destruction disguised as love.</strong> The Talmud says "your life comes first." Islam says "your body has rights over you." Jesus withdrew to rest. The Buddha called boundaryless compassion "idiot compassion." You are in good company.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 9: Daily Practice -->
+        <section class="step" id="step-9">
+            <div class="step-header">
+                <span class="step-number">Step 9</span>
+                <h2>Your Daily Practice</h2>
+            </div>
+
+            <div class="guru-message">
+                <div class="guru-avatar">&#9753;</div>
+                <div class="guru-text">
+                    <p>Boundaries are not a one-time event — they're a practice. Like meditation or exercise, they get stronger with repetition. Here's your daily micro-practice. Five minutes morning and evening. That's all.</p>
+                </div>
+            </div>
+
+            <div class="daily-practice-card">
+                <h3>Morning Check-in (2 minutes)</h3>
+                <div class="question-block">
+                    <label class="question">Today, my energy level is:</label>
+                    <input type="range" min="1" max="10" value="5" class="slider" id="q-energy" oninput="this.nextElementSibling.textContent = this.value">
+                    <span class="slider-value">5</span>
+                </div>
+                <div class="question-block">
+                    <label class="question">Given my energy, what can I realistically give today without depleting myself?</label>
+                    <textarea class="journal-input" id="q-morning-capacity" placeholder="Today I have capacity for..."></textarea>
+                </div>
+                <div class="question-block">
+                    <label class="question">Where might my boundaries be tested today?</label>
+                    <textarea class="journal-input" id="q-morning-prepare" placeholder="I might need to hold a boundary when..."></textarea>
+                </div>
+            </div>
+
+            <div class="daily-practice-card">
+                <h3>Evening Reflection (3 minutes)</h3>
+                <div class="question-block">
+                    <label class="question">Where did I honor my boundaries today?</label>
+                    <textarea class="journal-input" id="q-evening-honor" placeholder="I'm proud that I..."></textarea>
+                </div>
+                <div class="question-block">
+                    <label class="question">Where did I abandon them?</label>
+                    <p class="hint">No judgment — just noticing.</p>
+                    <textarea class="journal-input" id="q-evening-abandon" placeholder="I notice I..."></textarea>
+                </div>
+                <div class="question-block">
+                    <label class="question">What can I learn from today?</label>
+                    <textarea class="journal-input" id="q-evening-learn" placeholder="Next time, I want to..."></textarea>
+                </div>
+            </div>
+
+            <div class="guru-message">
+                <div class="guru-avatar">&#9753;</div>
+                <div class="guru-text">
+                    <p>On the days you slip — and you will — please be gentle with yourself. This is not a pass/fail. Every moment is a new chance. The fact that you can <em>notice</em> when you abandoned a boundary means your awareness is already growing. That's progress.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 10: Your Anchor Statement -->
+        <section class="step" id="step-10">
+            <div class="step-header">
+                <span class="step-number">Step 10</span>
+                <h2>Your Anchor Statement</h2>
+            </div>
+
+            <div class="guru-message">
+                <div class="guru-avatar">&#9753;</div>
+                <div class="guru-text">
+                    <p>Finally — I want you to write one statement. Your anchor. The thing you'll say to yourself in the hardest moments, when guilt is loud and the old patterns are pulling you back. This is YOUR truth, in YOUR words. Make it something that hits you in the chest when you read it.</p>
+                </div>
+            </div>
+
+            <div class="question-block anchor-block">
+                <label class="question">My anchor statement:</label>
+                <p class="hint">Examples: "I am allowed to protect my peace." / "Their reaction is not my responsibility." / "I choose me, and that is not a crime." / "I can love them and still say no."</p>
+                <textarea class="journal-input anchor-input" id="q-anchor" placeholder="Write the one sentence you need to hear most..."></textarea>
+            </div>
+
+            <div class="guru-message final">
+                <div class="guru-avatar">&#9753;</div>
+                <div class="guru-text">
+                    <p>You've done something important today. You looked at hard things. You told the truth. You started claiming your right to take up space in your own life.</p>
+                    <p>Remember: this is a journey, not a destination. Some days will be hard. Some boundaries will be messy. Some people won't like the new you. That's okay. The people who truly love you will adjust. And the ones who can only love you without boundaries? They were loving a performance, not you.</p>
+                    <p><strong>You deserve relationships where you don't have to disappear to be loved.</strong></p>
+                    <p>Come back to this workbook whenever you need to. Update your answers as you grow. And be proud — you started.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Toolkit -->
+        <section class="step" id="toolkit">
+            <div class="step-header">
+                <span class="step-number">&hearts;</span>
+                <h2>Quick Toolkit</h2>
+            </div>
+
+            <div class="toolkit-section">
+                <h3>Emergency Phrases (When You Don't Know What to Say)</h3>
+                <div class="phrases-grid">
+                    <div class="phrase">"Let me think about that and get back to you."</div>
+                    <div class="phrase">"That doesn't work for me."</div>
+                    <div class="phrase">"I'm not available for that."</div>
+                    <div class="phrase">"I care about you, AND my answer is no."</div>
+                    <div class="phrase">"I need some time to myself right now."</div>
+                    <div class="phrase">"I won't be able to do that."</div>
+                    <div class="phrase">"This isn't something I'm willing to discuss."</div>
+                    <div class="phrase">"I hear you. I still need to do what's right for me."</div>
+                    <div class="phrase">"I'm going to take a break from this conversation."</div>
+                    <div class="phrase">"I love you and this is my limit."</div>
+                </div>
+            </div>
+
+            <div class="toolkit-section">
+                <h3>The 4-Step Boundary Formula</h3>
+                <div class="formula-card">
+                    <div class="formula-step"><span>1</span> Name it: "When you [specific behavior]..."</div>
+                    <div class="formula-step"><span>2</span> Feel it: "I feel [emotion]..."</div>
+                    <div class="formula-step"><span>3</span> Need it: "I need [specific change]..."</div>
+                    <div class="formula-step"><span>4</span> Protect it: "If [violation], I will [consequence]."</div>
+                </div>
+            </div>
+
+            <div class="toolkit-section">
+                <h3>Ground Yourself First (Before Any Hard Conversation)</h3>
+                <ol class="grounding-list">
+                    <li>Take 3 slow breaths (exhale longer than inhale)</li>
+                    <li>Feel your feet on the ground</li>
+                    <li>Place a hand on your chest and say: "I can do hard things"</li>
+                    <li>Remember: their reaction is their responsibility, not yours</li>
+                    <li>Speak from your center, not from your fear</li>
+                </ol>
+            </div>
+
+            <div class="toolkit-section">
+                <h3>Reminders for Hard Days</h3>
+                <div class="reminders">
+                    <p>"No" is a complete sentence.</p>
+                    <p>Guilt means growth, not wrongdoing.</p>
+                    <p>You can love someone and still have limits.</p>
+                    <p>Their discomfort ≠ your boundary is wrong.</p>
+                    <p>You don't need to set yourself on fire to keep others warm.</p>
+                    <p>The loneliness of new boundaries is temporary.</p>
+                    <p>You're not "too much." You were around people who weren't enough.</p>
+                    <p>Every tradition says: caring for yourself is sacred.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="save-toast" id="save-toast">Saved to your browser</div>
+
+    <script src="airtable-config.js"></script>
+    <script src="airtable-sync.js"></script>
+    <script src="workbook.js"></script>
+</body>
+</html>
